@@ -1,12 +1,18 @@
 {
   "name": "desafiobackend1",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "echo\"Error: no teste especified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laurentealexandre/desafioBackend1.git"
+  },
+  
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
