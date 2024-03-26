@@ -7,13 +7,13 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "echo\"Error: no teste especified\" && exit 1",
-    "debug": "SET DEBUG=desafiobackend1:* & npm start"
+    "debug": "SET DEBUG=desafiobackend1:* & npm start",
+    "lint": "eslint **/*.js --ignore-pattern node_modules/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laurentealexandre/desafioBackend1.git"
   },
-  
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -21,5 +21,9 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
