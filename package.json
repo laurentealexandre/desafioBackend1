@@ -8,7 +8,8 @@
     "start": "node ./bin/www",
     "test": "echo\"Error: no teste especified\" && exit 1",
     "debug": "SET DEBUG=desafiobackend1:* & npm start",
-    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "nodemon": "nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -17,13 +18,15 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.19.2",
     "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1",
+    "mysql2": "^3.9.3"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^3.1.0"
   }
 }
