@@ -10,10 +10,10 @@ const sobrenomeMiddleware = require('../middlewares/sobrenomeMiddleware');
 const idadeMiddleware = require('../middlewares/idadeMiddleware');
 
 /* GET home page. */
-router.get('/',  clientesController.findAll); 
+router.get('/',clientesController.findAll); 
 
 /* PUT clientes listing. */
-router.put('/', clientesController.save); 
+router.put('/',clientesController.save); 
 
 /* POST clientes listing. */
 router.post('/', nomeMiddleware.validateName,

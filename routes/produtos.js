@@ -11,7 +11,7 @@ const precoMiddleware = require('../middlewares/precoMiddleware');
 const data_atualizadoMiddleware = require('../middlewares/data_atualizadoMiddleware');
 
 /* GET home page. */
-router.get('/', clientesController.findAll); 
+router.get('/', produtosController.findAll); 
 
 /* PUT clientes listing. */
 router.put('/', produtosController.save); 
