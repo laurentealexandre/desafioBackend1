@@ -5,6 +5,10 @@ const mysql = require('mysql2/promise');
 
 const clientesController = require('../controllers/clientesController');
 
+const nomeMiddleware = require('../middlewares/nomeMiddleware');
+const sobrenomeMiddleware = require('../middlewares/sobrenomeMiddleware');
+const idadeMiddleware = require('../middlewares/idadeMiddleware');
+
 /* GET home page. */
 router.get('/',  clientesController.findAll); 
 
@@ -12,7 +16,12 @@ router.get('/',  clientesController.findAll);
 router.put('/', clientesController.save); 
 
 /* POST clientes listing. */
-router.post('/',  clientesController.update);
+router.post('/', nomeMiddleware.validateName,
+    sobrenomeMiddleware.validateFamilyName,
+    idadeMiddleware.validateAge,
+    clientesController.save
+);
+
 
 /* DELETE clientes listing. */
 router.delete('/:id', clientesController.remove);
