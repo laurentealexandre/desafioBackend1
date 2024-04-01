@@ -6,7 +6,7 @@ const mysql = require('mysql2/promise');
 const produtosController = require('../controllers/produtosController');
 
 /* GET home page. */
-router.get('/',  produtosController.findAll); 
+router.get('/', clientesController.findAll); 
 
 /* PUT clientes listing. */
 router.put('/', produtosController.save); 
