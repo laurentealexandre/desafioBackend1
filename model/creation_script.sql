@@ -11,7 +11,7 @@ CREATE TABLE `desafio`.`produtos` (
     `ID` INT(10) NULL AUTO_INCREMENT,
     `Nome` VARCHAR(255) NOT NULL,
     `Descricao` VARCHAR(255) NOT NULL,
-    `preco` FLOAT(10) NOT NULL,
-    `data_atualizado` DATE NOT NULL,
+    `preco` DECIMAL(10) NOT NULL,
+    `data_atualizado` DATETIME NOT NULL,
     PRIMARY KEY (`ID`)
 ) ENGINE = InnoDB;
