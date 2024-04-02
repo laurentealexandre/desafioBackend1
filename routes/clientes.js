@@ -13,14 +13,10 @@ const idadeMiddleware = require('../middlewares/idadeMiddleware');
 router.get('/',clientesController.findAll); 
 
 /* PUT clientes listing. */
-router.put('/',clientesController.save); 
+router.put('/',clientesController.update); 
 
 /* POST clientes listing. */
-router.post('/', nomeMiddleware.validateName,
-    sobrenomeMiddleware.validateFamilyName,
-    idadeMiddleware.validateAge,
-    clientesController.save
-);
+router.post('/',clientesController.save);
 
 
 /* DELETE clientes listing. */
