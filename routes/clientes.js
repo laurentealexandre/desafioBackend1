@@ -16,7 +16,10 @@ router.get('/',clientesController.findAll);
 router.put('/',clientesController.update); 
 
 /* POST clientes listing. */
-router.post('/',clientesController.save);
+router.post('/',nomeMiddleware.validateName,
+sobrenomeMiddleware.validateFamilyName,
+idadeMiddleware.validateAge,
+clientesController.save);
 
 
 /* DELETE clientes listing. */

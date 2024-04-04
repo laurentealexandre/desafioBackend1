@@ -1,12 +1,12 @@
 const validateDescription = (request, response, next) => {
     const { body } = request;
-    if (body.descricao == undefined || body.descricao === '') {
+    if (body.Descricao == undefined) {
         return response.status(400)
-            .json({ message: 'O campo "descricao" é obrigatório' });
+            .json({ message: 'O campo "Descricao" é obrigatório' });
     }
-    if (isNaN(parseInt(body.descricao)) || parseInt(body.descricao) < 0 || parseInt(body.descricao) > 130) {
+    if (body.Descricao === '') {
         return response.status(400)
-            .json({ message: 'O campo "descricao" deve ser inteiro positivo e valor possível' });
+            .json({ message: 'O campo "Descricao" não pode ser vazio' });
     }
     next();
 };

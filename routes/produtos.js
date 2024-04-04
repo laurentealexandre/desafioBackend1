@@ -13,13 +13,17 @@ const data_atualizadoMiddleware = require('../middlewares/data_atualizadoMiddlew
 /* GET home page. */
 router.get('/', produtosController.findAll); 
 
-/* PUT clientes listing. */
+/* PUT produtos listing. */
 router.put('/', produtosController.update); 
 
-/* POST clientes listing. */
-router.post('/',produtosController.save);
+/* POST produtos listing. */
+router.post('/',nomeMiddleware.validateName,
+descricaoMiddleware.validateDescription,
+precoMiddleware.validatePrice,
+data_atualizadoMiddleware.validateDate,
+produtosController.save);
 
-/* DELETE clientes listing. */
+/* DELETE produtos listing. */
 router.delete('/:id', produtosController.remove);
 
 

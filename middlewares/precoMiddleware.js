@@ -4,7 +4,7 @@ const validatePrice = (request, response, next) => {
         return response.status(400)
             .json({ message: 'O campo "preco" é obrigatório' });
     }
-    if (isNaN(parseInt(body.preco)) || parseInt(body.preco) < 0 || parseInt(body.preco) > 130) {
+    if (isNaN(parseInt(body.preco)) || parseInt(body.preco) < 0 || parseInt(body.preco) > 10000) {
         return response.status(400)
             .json({ message: 'O campo "preco" deve ser inteiro positivo e valor possível' });
     }
